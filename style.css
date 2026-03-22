@@ -996,3 +996,169 @@ input[type="range"] {
   .vc-main { grid-template-columns: auto 1fr; }
   .vc-right { flex-direction: row; grid-column: 1 / -1; }
 }
+
+/* ── 12. 요청사항 섹션 ── */
+.badge-ai {
+  background: #EEF2FF;
+  color: #4338CA;
+  border: 1px solid #C7D2FE;
+  font-size: 10px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.req-ai-badge {
+  font-size: 10px;
+  font-weight: 500;
+  color: #4338CA;
+  background: #EEF2FF;
+  border: 1px solid #C7D2FE;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-family: var(--mono);
+  margin-left: 4px;
+}
+.request-textarea {
+  width: 100%;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--rs);
+  padding: 14px 16px;
+  outline: none;
+  resize: vertical;
+  min-height: 120px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.request-textarea:focus {
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
+  background: white;
+}
+.req-helper {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--text3);
+  line-height: 1.6;
+  padding: 10px 14px;
+  background: #F8F8FF;
+  border-radius: var(--rs);
+  border: 1px solid #E8E8F8;
+}
+.req-char-count {
+  margin-top: 6px;
+  text-align: right;
+  font-size: 11px;
+  color: var(--text3);
+  font-family: var(--mono);
+}
+
+/* 요청사항 분석 패널 (Step 2) */
+.request-analysis-box {
+  background: linear-gradient(135deg, #F0F0FF 0%, #F8F4FF 100%);
+  border: 1.5px solid #C7D2FE;
+  border-radius: var(--r);
+  padding: 18px 22px;
+  margin-bottom: 20px;
+}
+.ra-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.ra-icon {
+  width: 28px; height: 28px;
+  background: #6366F1;
+  border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.ra-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3730A3;
+}
+.ra-subtitle {
+  font-size: 11px;
+  color: #6366F1;
+  font-family: var(--mono);
+}
+.ra-original {
+  font-size: 12px;
+  color: #4338CA;
+  background: white;
+  border: 1px solid #C7D2FE;
+  border-radius: var(--rs);
+  padding: 10px 14px;
+  line-height: 1.65;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+.ra-tags-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6366F1;
+  font-family: var(--mono);
+  margin-bottom: 8px;
+}
+.ra-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ra-tag {
+  padding: 4px 12px;
+  background: white;
+  border: 1.5px solid #A5B4FC;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4338CA;
+}
+.ra-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #6366F1;
+  font-family: var(--mono);
+}
+.ra-spinner {
+  width: 16px; height: 16px;
+  border: 2px solid #C7D2FE;
+  border-top-color: #6366F1;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+/* 요청 반영 뱃지 (카드 내) */
+.req-match-banner {
+  margin: 0 24px 0;
+  padding: 10px 16px;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: var(--rs);
+  font-size: 12px;
+  color: #166534;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.6;
+}
+.req-match-banner.partial {
+  background: #FFFBEB;
+  border-color: #FDE68A;
+  color: #92400E;
+}
