@@ -71,6 +71,17 @@ const MOCK_DB = [
   },
 ];
 
+
+/* ── venues.js 자동 연동 ──────────────────────────────
+   venues.js 가 로드되어 있으면 MOCK_DB 앞에 추가합니다.
+   index.html 에서 <script src="venues.js"> 를 먼저 로드하세요. */
+if (typeof VENUE_DB !== 'undefined' && VENUE_DB.length > 0) {
+  VENUE_DB.forEach(v => {
+    if (!MOCK_DB.find(m => m.id === v.id)) MOCK_DB.unshift(v);
+  });
+  console.log(`✅ venues.js 로드 — ${VENUE_DB.length}개 장소 추가`);
+}
+
 /* ─────────────────────────────────────
    localStorage에서 업로드된 장소 불러오기
 ───────────────────────────────────────── */
